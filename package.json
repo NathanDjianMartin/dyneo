@@ -12,6 +12,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@remotion/cli": "4.0.6",
+    "puppeteer": "^20.8.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "remotion": "4.0.6"
