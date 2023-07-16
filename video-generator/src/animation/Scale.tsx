@@ -1,35 +1,46 @@
-import { interpolate, useCurrentFrame } from 'remotion';
+import { spring } from 'remotion';
+import { useCurrentFrame, useVideoConfig } from 'remotion';
 import React from 'react';
 import { AbsoluteFill } from 'remotion';
 
-type ScaleProps = {
+type ScaleSpringProps = {
 	children: React.ReactNode;
-	direction: 'grow' | 'shrink';
-	factor: number;
 	startFrame: number;
 	endFrame: number;
+	stiffness?: number;
+	isReverse?: boolean;
 };
-
-export const Scale: React.FC<ScaleProps> = ({
+export const ScaleSpring: React.FC<ScaleSpringProps> = ({
 	children,
-	direction,
-	factor,
 	startFrame,
 	endFrame,
+	stiffness = 100,
+	isReverse = false,
 }) => {
 	const frame = useCurrentFrame();
+	const { fps } = useVideoConfig();
 
-	const outputRangeLowerBound = direction === 'grow' ? 1 : factor;
-	const outputRangeUpperBound = direction === 'grow' ? factor : 1;
-	const outputRange = [outputRangeLowerBound, outputRangeUpperBound];
+	if (startFrame >= endFrame) {
+		throw new Error(
+			'ScaleSpring animation endFrame should be greater than endFrame'
+		);
+	}
+
+	const start = frame - startFrame;
+	const duration = endFrame - startFrame;
 
 	return (
 		<AbsoluteFill
 			style={{
 				scale: String(
-					interpolate(frame, [startFrame, endFrame], outputRange, {
-						extrapolateLeft: 'clamp',
-						extrapolateRight: 'clamp',
+					spring({
+						frame: start,
+						fps,
+						config: {
+							stiffness,
+						},
+						reverse: isReverse,
+						durationInFrames: duration,
 					})
 				),
 				justifyContent: 'center',

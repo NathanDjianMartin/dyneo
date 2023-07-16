@@ -1,5 +1,5 @@
 import { AbsoluteFill } from 'remotion';
-import { Scale } from './animation/Scale';
+import { ScaleSpring } from './animation/Scale';
 
 export const MyComposition = () => {
 	const name = 'Nathan';
@@ -12,9 +12,16 @@ export const MyComposition = () => {
 				justifyContent: 'center',
 			}}
 		>
-			<Scale direction="grow" startFrame={0} endFrame={10} factor={4}>
-				<h1>Hey {name}!</h1>
-			</Scale>
+			<ScaleSpring startFrame={0} endFrame={10}>
+				<h1
+					style={{
+						fontSize: 100,
+						fontWeight: 'bolder',
+					}}
+				>
+					Hey {name}!
+				</h1>
+			</ScaleSpring>
 		</AbsoluteFill>
 	);
 };
