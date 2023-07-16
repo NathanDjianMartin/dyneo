@@ -1,5 +1,7 @@
 import { AbsoluteFill } from 'remotion';
-import { ScaleSpring } from './animation/Scale';
+
+import { ScaleSpring } from '../animation/Scale';
+import { fontFamily } from '../constants';
 
 export const MyComposition = () => {
 	const name = 'Nathan';
@@ -17,6 +19,8 @@ export const MyComposition = () => {
 					style={{
 						fontSize: 100,
 						fontWeight: 'bolder',
+						fontFamily,
+						textAlign: 'center',
 					}}
 				>
 					Hey {name}!
