@@ -355,6 +355,13 @@
   dependencies:
     "@typescript-eslint/utils" "5.19.0"
 
+"@remotion/google-fonts@^4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@remotion/google-fonts/-/google-fonts-4.0.6.tgz#7b5432bd3db3100fd80c2e5bdc460fd8669a7424"
+  integrity sha512-y0Cr/j/5T3/T3PaYSYB4B2ehC4TEm8dL+3qFSidjbRQCILRHJrGgcI6G/+/w8MQKIVyAtpPBX3z6DNANHxTruw==
+  dependencies:
+    remotion "4.0.6"
+
 "@remotion/media-utils@4.0.6":
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/@remotion/media-utils/-/media-utils-4.0.6.tgz#2437adc720882a560710565ec9794323df146f4e"
