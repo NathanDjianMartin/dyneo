@@ -1,5 +1,4 @@
 import { AbsoluteFill } from 'remotion';
-import { interpolate } from 'remotion';
 import { Scale } from './animation/Scale';
 
 export const MyComposition = () => {
