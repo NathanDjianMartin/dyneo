@@ -2,7 +2,6 @@ import { AbsoluteFill } from 'remotion';
 
 import { ScaleSpring } from '../animation/Scale';
 import { fontFamily } from '../constants';
-import { Music } from './Music';
 
 export const HeyTitle = () => {
 	const name = 'Nathan';
@@ -15,7 +14,7 @@ export const HeyTitle = () => {
 				justifyContent: 'center',
 			}}
 		>
-			<ScaleSpring isReverse startFrame={34} endFrame={35}>
+			<ScaleSpring isReverse startFrame={29} endFrame={30}>
 				<ScaleSpring startFrame={0} endFrame={10}>
 					<h1
 						style={{
