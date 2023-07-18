@@ -22,7 +22,7 @@ export const ScaleSpring: React.FC<ScaleSpringProps> = ({
 
 	if (startFrame >= endFrame) {
 		throw new Error(
-			'ScaleSpring animation endFrame should be greater than endFrame'
+			'ScaleSpring animation endFrame should be greater than startFrame'
 		);
 	}
 
