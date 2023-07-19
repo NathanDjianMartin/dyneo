@@ -1,5 +1,5 @@
 import React from 'react';
-import { Transform } from '../animation/Transform';
+import { Transform } from '../animations/Transform';
 import { AbsoluteFill } from 'remotion';
 
 export const InBackground: React.FC = () => {
