@@ -2,15 +2,8 @@ import { interpolate } from 'remotion';
 import { useCurrentFrame } from 'remotion';
 import React from 'react';
 import { AbsoluteFill } from 'remotion';
-import { Axis, Position } from '../types';
-
-type TransformProps = {
-	children: React.ReactNode;
-	startFrame: number;
-	endFrame: number;
-	startPosition: Position;
-	endPosition: Position;
-};
+import { Axis } from '../../types';
+import { TransformProps } from './transform.types';
 
 export const Transform: React.FC<TransformProps> = ({
 	children,

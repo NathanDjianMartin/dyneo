@@ -1,6 +1,6 @@
 import { Composition } from 'remotion';
 
-import { FullComposition } from './compositions/FullComposition';
+import { FullComposition } from './compositions/FullComposition/FullComposition';
 
 export const RemotionRoot: React.FC = () => {
 	return (

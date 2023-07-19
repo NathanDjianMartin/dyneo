@@ -2,14 +2,8 @@ import { spring } from 'remotion';
 import { useCurrentFrame, useVideoConfig } from 'remotion';
 import React from 'react';
 import { AbsoluteFill } from 'remotion';
+import { ScaleSpringProps } from './scaleSpring.types';
 
-type ScaleSpringProps = {
-	children: React.ReactNode;
-	startFrame: number;
-	endFrame: number;
-	stiffness?: number;
-	isReverse?: boolean;
-};
 export const ScaleSpring: React.FC<ScaleSpringProps> = ({
 	children,
 	startFrame,

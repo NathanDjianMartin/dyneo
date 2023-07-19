@@ -1,9 +1,9 @@
 import { AbsoluteFill } from 'remotion';
 
-import { ScaleSpring } from '../../animations/ScaleSpring';
+import { ScaleSpring } from '../../animations/ScaleSpring/ScaleSpring';
 import { fontFamily } from '../../constants';
+import { ConditionalWrapper } from '../ConditionalWrapper/ConditionalWrapper';
 import { TitleProps } from './title.types';
-import { ConditionalWrapper } from '../conditional-wrapper/ConditionalWrapper';
 
 export const Title = ({
 	text,

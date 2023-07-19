@@ -1,6 +1,6 @@
-import { Title } from '../components/title/Title';
-import { InBackground } from './InBackground';
-import { Music } from './Music';
+import { Title } from '../../components/Title/Title';
+import { InBackground } from '../InBackground';
+import { Music } from '../Music';
 import { FullCompositionProps } from './fullComposition.types';
 
 export const FullComposition = ({ name = '{name}' }: FullCompositionProps) => {
